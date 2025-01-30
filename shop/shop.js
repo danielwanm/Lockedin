@@ -15,7 +15,7 @@ const coins = ref(database, `identity/${sessionStorage.getItem("key")}/coins`)
 onValue(coins, function(snapshot){
     
     let coinsArray = Object.values(snapshot.val())
-    let coins = startArray[0]
+    let coins = coinsArray[0]
     localcoins = coins
 })
 coinscount.innerText = localcoins 
