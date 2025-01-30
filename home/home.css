@@ -116,7 +116,7 @@ button:hover {
 }
 
 .coins-display::after {
-    content: "1 coin is obtained for every hour studied. Coins are rewarded at the end of every day, or press convert now! Use coins to buy items and more!";
+    content: "1 coin can be obtained for every minute studied. Use coins to buy items and more!";
     position: absolute;
     right: 0;
     top: 100%;

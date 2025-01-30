@@ -12,3 +12,27 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+.container {
+    width: 500px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    text-align: center;
+    box-sizing: border-box;
+    background: rgba(253, 252, 247, 0.95);
+    border: 3px solid #3d405b;
+    border-radius: 2px;
+    box-shadow: 8px 8px 0px #3d405b;
+}
+.title {
+    font-size: 42px;
+    font-weight: normal;
+    color: #3d405b;
+    margin: 0;
+    text-align: center;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}

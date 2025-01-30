@@ -60,7 +60,7 @@ woodenBtn.addEventListener("click", function(){
 silverBtn.addEventListener("click", function(){
     let rarity = "none"
     if (localcoins>200){
-        prob =6
+        prob =30
         localcoins -= 200
         remove(coins)
         push(coins, localcoins)
@@ -73,7 +73,7 @@ silverBtn.addEventListener("click", function(){
 goldBtn.addEventListener("click", function(){
     let rarity = "none"
     if (localcoins>500){
-        prob =9
+        prob =60
         localcoins -= 500
         remove(coins)
         push(coins, localcoins)
@@ -86,13 +86,13 @@ goldBtn.addEventListener("click", function(){
 
 
 function chest(prob, rarity) {
-    let raw = getRandomInt(prob, 10)
-    if (raw>8){
+    let raw = getRandomInt(prob, 100)
+    if (raw>95){
         rarity = "legendary"
         push(items, "legendary")
 
     }
-    else if (raw>5){
+    else if (raw>60){
         rarity = "rare"
         push(items, "rare")
     }
