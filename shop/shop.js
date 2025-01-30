@@ -8,7 +8,7 @@ const database = getDatabase(app)
 
 //set up coins
 let localcoins = 0
-
+let prob = 0
 const coins = ref(database, `identity/${sessionStorage.getItem("key")}/coins`)
 
 
