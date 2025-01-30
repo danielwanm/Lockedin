@@ -41,25 +41,21 @@ onValue(running, function(snapshot){
 })
 onValue(startTimeInDb, function(snapshot){
     
-    let startArray = Object.values(snapshot.val())
-    let start = startArray[0]
+    let start = Object.values(snapshot.val())[0]
     localStartTime = start
 })
 onValue(totalTime, function(snapshot){
-    let totalTimeArray = Object.values(snapshot.val())
-    let totalTime = totalTimeArray[0]
+    let totalTime = Object.values(snapshot.val())[0]
     localTotalTime = totalTime
     timeStudiedTotal.innerText = format(localTotalTime)
 })
 onValue(coins, function(snapshot){
-    let coinsArray = Object.values(snapshot.val())
-    let coins = coinsArray[0]
+    let coins = Object.values(snapshot.val())[0]
     localCoins = coins
     coinsCount.innerText = localCoins
 })
 onValue(allTimeTotal, function(snapshot){
-    let allTimeTotalArray = Object.values(snapshot.val())
-    let allTimeTotal = allTimeTotalArray[0]
+    let allTimeTotal = Object.values(snapshot.val())[0]
     localAllTimeTotal = allTimeTotal
     allTimeTotalEl.innerText = format(localAllTimeTotal)
 })
