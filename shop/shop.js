@@ -30,7 +30,11 @@ woodenBtn.addEventListener("click", function(){
     if (localcoins>100){
         prob =1
         localcoins -= 100
-     chest(prob)
+        remove(coins)
+        push(coins, localcoins)
+        chest(prob)
+        coinscount.innerText = localcoins 
+
     }
 })
 silverBtn.addEventListener("click", function(){
@@ -38,7 +42,11 @@ silverBtn.addEventListener("click", function(){
     if (localcoins>200){
         prob =6
         localcoins -= 200
+        remove(coins)
+        push(coins, localcoins)
         chest(prob)
+        coinscount.innerText = localcoins 
+
     }
  
 })
@@ -47,7 +55,11 @@ goldBtn.addEventListener("click", function(){
     if (localcoins>500){
         prob =9
         localcoins -= 500
+        remove(coins)
+        push(coins, localcoins)
         chest(prob)
+        coinscount.innerText = localcoins 
+
     }
 
 })
