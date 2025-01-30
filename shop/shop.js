@@ -36,6 +36,7 @@ onValue(coins, function(snapshot) {
 woodenBtn.addEventListener("click", function(){
     let rarity = "none"
     if (localcoins>100){
+        console.log("clicked buy")
         prob =1
         localcoins -= 100
         remove(coins)
