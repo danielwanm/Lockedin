@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LockedIn</title>
+    <link rel="stylesheet" href="home.css">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.gstatic.com https://www.googleapis.com; object-src 'none';">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="coins-display">
+        <p class="coins">
+            <img src="../resources/coins.png" alt="Coins" class="coin-icon">
+            <span id="coins-count">0</span>
+        </p>
+        <button id ="convert-btn">convert all</button>
+        <p>Total Time Studied all time</p>
+        <p id="all-time-total">0</p>
+    </div>
+
+    <div class="container">
+        <h1 class="title">LockedIn</h1>
+        <p id="time-studied-current" class="time-display">00:00:00</p>
+        <div class="button-group">
+            <button id="start-btn">Start</button>
+            <button id="done-btn">Done</button>
+        </div>
+        <p class="total-time">Total Time Today</p>
+        <p id="time-studied-total" class="time-display">00:00:00</p>
+    </div>
+    <div class="container">
+        <button id="shop-btn">Shop</button>
+        <button id="inventory-btn">Inventory</button>
+    </div>
+    <script src="home.js" type="module"></script>
+</body>
+</html>

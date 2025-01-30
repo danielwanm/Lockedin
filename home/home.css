@@ -1,0 +1,151 @@
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('Designer.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.container {
+    width: 500px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    text-align: center;
+    box-sizing: border-box;
+    background: rgba(253, 252, 247, 0.95);
+    border: 3px solid #3d405b;
+    border-radius: 2px;
+    box-shadow: 8px 8px 0px #3d405b;
+}
+
+.title {
+    font-size: 42px;
+    font-weight: normal;
+    color: #3d405b;
+    margin: 0;
+    text-align: center;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.time-display {
+    font-size: 56px;
+    font-weight: normal;
+    color: #3d405b;
+    margin: 10px 0;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+.total-time {
+    font-size: 24px;
+    color: #81b29a;
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+button {
+    padding: 16px 32px;
+    border: 2px solid #3d405b;
+    background: transparent;
+    border-radius: 2px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #3d405b;
+    box-shadow: 4px 4px 0px #3d405b;
+}
+
+button:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px #3d405b;
+}
+
+#start-btn {
+    background: #81b29a;
+    color: #f4f1de;
+}
+
+#done-btn {
+    background: #e07a5f;
+    color: #f4f1de;
+}
+
+.coins-display {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #fdfcf7;
+    padding: 15px 25px;
+    border: 2px solid #3d405b;
+    border-radius: 2px;
+    box-shadow: 4px 4px 0px #3d405b;
+    cursor: help;
+    z-index: 100;
+}
+
+.coins-display::after {
+    content: "1 coin is obtained for every hour studied. Coins are rewarded at the end of every day, or press convert now! Use coins to buy items and more!";
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background: #fdfcf7;
+    border: 2px solid #3d405b;
+    padding: 15px;
+    width: 200px;
+    font-size: 16px;
+    color: #3d405b;
+    font-family: 'Courier New', Courier, monospace;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.coins-display:hover::after {
+    visibility: visible;
+    opacity: 1;
+}
+
+#convert-btn {
+    margin-top: 10px;
+    font-size: 12px;
+    padding: 8px 16px;
+}
+
+.coin-icon {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+.coins {
+    font-size: 32px;
+    font-weight: normal;
+    color: #3d405b;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#coins-count {
+    color: #f2cc8f;
+}
