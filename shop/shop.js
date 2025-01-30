@@ -5,25 +5,33 @@ const appSettings = {
 }
 const app = initializeApp(appSettings)
 const database = getDatabase(app)
-//set up prob
-let prob = 0
 
 //set up coins
 let localcoins = 0
-let coinscount = document.getElementById("coins-count")
+
 const coins = ref(database, `identity/${sessionStorage.getItem("key")}/coins`)
-onValue(coins, function(snapshot){
-    
-    let coinsArray = Object.values(snapshot.val())
-    let coins = coinsArray[0]
-    localcoins = coins
-})
-coinscount.innerText = localcoins 
+
 
 //DOM
 let woodenBtn = document.getElementById("wooden-btn")
 let silverBtn = document.getElementById("silver-btn")
 let goldBtn = document.getElementById("gold-btn")
+let coinscount = document.getElementById("coins-count")
+
+
+onValue(coins, function(snapshot) {
+    if (snapshot.exists()) {
+        let coinsValue = Object.values(snapshot.val())[0]; // Ensure snapshot is valid before using it
+        localcoins = coinsValue;
+        coinscount.innerText = localcoins; // Update the UI
+    } else {
+        console.log("No coins data available");
+    }
+});
+
+
+
+
 
 woodenBtn.addEventListener("click", function(){
     let rarity = "none"
