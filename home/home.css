@@ -99,6 +99,18 @@ button:hover {
     cursor: help;
     z-index: 100;
 }
+.buttons-display {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: #fdfcf7;
+    padding: 15px 25px;
+    border: 2px solid #3d405b;
+    border-radius: 2px;
+    box-shadow: 4px 4px 0px #3d405b;
+    cursor: help;
+    z-index: 100;
+}
 
 .coins-display::after {
     content: "1 coin is obtained for every hour studied. Coins are rewarded at the end of every day, or press convert now! Use coins to buy items and more!";
