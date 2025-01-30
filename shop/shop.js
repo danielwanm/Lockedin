@@ -43,7 +43,7 @@ woodenBtn.addEventListener("click", function(){
         localcoins -= 100
         remove(coins)
         push(coins, localcoins)
-        chest(prob)
+        chest(prob, rarity)
         coinscount.innerText = localcoins 
 
     }
@@ -55,7 +55,7 @@ silverBtn.addEventListener("click", function(){
         localcoins -= 200
         remove(coins)
         push(coins, localcoins)
-        chest(prob)
+        chest(prob, rarity)
         coinscount.innerText = localcoins 
 
     }
@@ -68,7 +68,7 @@ goldBtn.addEventListener("click", function(){
         localcoins -= 500
         remove(coins)
         push(coins, localcoins)
-        chest(prob)
+        chest(prob, rarity)
         coinscount.innerText = localcoins 
 
     }
@@ -76,7 +76,7 @@ goldBtn.addEventListener("click", function(){
 })
 
 
-function chest(prob) {
+function chest(prob, rarity) {
     let raw = getRandomInt(prob, 10)
     if (raw>8){
         rarity = "epic"
