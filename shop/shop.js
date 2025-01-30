@@ -8,10 +8,11 @@ const database = getDatabase(app)
 
 //set up coins
 let localcoins = 0
+let localitems = []
+
 let prob = 0
 const coins = ref(database, `identity/${sessionStorage.getItem("key")}/coins`)
-
-
+const items = ref(database, `identity/${sessionStorage.getItem("key")}/items`)
 //DOM
 let woodenBtn = document.getElementById("wooden-btn")
 let silverBtn = document.getElementById("silver-btn")
@@ -29,6 +30,14 @@ onValue(coins, function(snapshot) {
     }
 });
 
+onValue(items, function(snapshot) {
+    if (snapshot.exists()) {
+        let itemsValue = Object.values(snapshot.val())[0]; // Ensure snapshot is valid before using it
+        localitems = itemsValue;
+    } else {
+        console.log("No items data available");
+    }
+});
 
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -79,15 +88,18 @@ goldBtn.addEventListener("click", function(){
 function chest(prob, rarity) {
     let raw = getRandomInt(prob, 10)
     if (raw>8){
-        rarity = "epic"
+        rarity = "legendary"
+        push(items, "legendary")
 
     }
     else if (raw>5){
         rarity = "rare"
+        push(items, "rare")
     }
     else {
         rarity = "common"
+        push(items, "common")
     }
-    alert(`you got a ${rarity} item`)
+    alert(`you got a ${rarity} background`)
 
 }

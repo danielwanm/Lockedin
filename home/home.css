@@ -6,11 +6,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background: #f4f1de;
+    /*
     background-image: url('../resources/Designer.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    */
 }
 
 .container {
