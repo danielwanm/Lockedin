@@ -49,20 +49,21 @@ onValue(totalTime, function(snapshot){
     let totalTimeArray = Object.values(snapshot.val())
     let totalTime = totalTimeArray[0]
     localTotalTime = totalTime
+    timeStudiedTotal.innerText = format(localTotalTime)
 })
 onValue(coins, function(snapshot){
     let coinsArray = Object.values(snapshot.val())
     let coins = coinsArray[0]
     localCoins = coins
+    coinsCount.innerText = localCoins
 })
 onValue(allTimeTotal, function(snapshot){
     let allTimeTotalArray = Object.values(snapshot.val())
     let allTimeTotal = allTimeTotalArray[0]
     localAllTimeTotal = allTimeTotal
+    allTimeTotalEl.innerText = format(localAllTimeTotal)
 })
-timeStudiedTotal.innerText = format(localTotalTime)
-timeStudiedCurrent.innerText = format(timeStudied)
-coinsCount.innerText = localCoins
+
 //set up total time
 
 function format(time){
