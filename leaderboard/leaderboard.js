@@ -8,6 +8,7 @@ const appSettings = {
 const app = initializeApp(appSettings)
 const database = getDatabase(app)
 const identity = ref(database, "identity")
+const Leaderboard = document.getElementById("leaderboard")
 
 onValue(identity, function(snapshot){
 
@@ -23,6 +24,7 @@ onValue(identity, function(snapshot){
                 winner = j
                 let newEl = document.createElement("tr")
                 newEl.innerHTML = `<td>${localArray[winner].username}</td><td>${localArray[winner].allTimeTotal}</td>`
+                Leaderboard.append(newEl)
             }
         }
         localArray.splice(winner, 1)
