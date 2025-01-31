@@ -24,7 +24,13 @@ onValue(identity, function(snapshot) {
     console.log("Local Array:", localArray);
 
     // Clear the leaderboard before appending new data
-    Leaderboard.innerHTML = "";
+    Leaderboard.innerHTML =   
+    `
+    <tr>
+    <th>Place</th>
+    <th>Name</th>
+    <th>Time</th>
+  </tr>`
 
     // Find the top 10 entries
     for (let i = 0; i < 10 && localArray.length > 0; i++) {
@@ -43,7 +49,7 @@ onValue(identity, function(snapshot) {
         localArray.splice(winnerIndex, 1);
 
         let newEl = document.createElement("tr");
-        newEl.innerHTML = `<td>${winnerData.username}</td><td>${Object.values(winnerData.allTimeTotal)[0]}</td>`;
+        newEl.innerHTML = `<td>${i}</td><td>${winnerData.username}</td><td>${Object.values(winnerData.allTimeTotal)[0]}</td>`;
         Leaderboard.appendChild(newEl);
     }
 });
