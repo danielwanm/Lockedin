@@ -86,7 +86,7 @@ goldBtn.addEventListener("click", function(){
 })
 
 backBtn.addEventListener("click", function(){
-    location.href = "../home.html"
+    location.href = "../home/home.html"
 })
 
 
