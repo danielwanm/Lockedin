@@ -93,6 +93,8 @@ backBtn.addEventListener("click", function(){
 
 function chest(prob, rarity) {
     let raw = getRandomInt(prob, 100)
+    let rarity;
+    let theme;
     if (raw>95){
         rarity = "legendary"
 
