@@ -14,7 +14,7 @@ onValue(identity, function(snapshot){
 
     let identityArray = Object.values(snapshot.val())
     let localArray =[...identityArray]
-    console.log(identityArray)
+    console.log(localArray)
     for (let i = 0; i <10;i++){
         let localmax = 0
         let winner
@@ -31,6 +31,7 @@ onValue(identity, function(snapshot){
             }
         }
         localArray.splice(winner, 1)
+        console.log(localArray)
         let newEl = document.createElement("tr")
         console.log(localArray[winner])
         newEl.innerHTML = `<td>${localArray[winner].username}</td><td>${Object.values(localArray[winner].allTimeTotal)[0]}</td>`
