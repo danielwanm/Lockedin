@@ -94,7 +94,7 @@ backBtn.addEventListener("click", function(){
 function chest(prob, rarity) {
     let raw = getRandomInt(prob, 100)
     let theme
-    if (raw>95){
+    if (raw>90){
         rarity = "legendary"
 
     }
@@ -106,11 +106,11 @@ function chest(prob, rarity) {
     }
     
     if (raw >= 95) {
-        theme = "space";
+        theme = "pokemon wonderland (full art)";
     } else if (raw >= 90) {
-        theme = "western";
+        theme = "hyperion (full art)";
     } else if (raw >= 85) {
-        theme = "cyberpunk";
+        theme = "cyberpunk 2077";
     } else if (raw >= 80) {
         theme = "fantasy";
     } else if (raw >= 75) {
@@ -122,7 +122,7 @@ function chest(prob, rarity) {
     } else if (raw >= 60) {
         theme = "prehistoric";
     } else if (raw >= 55) {
-        theme = "urban";
+        theme = "city";
     } else if (raw >= 50) {
         theme = "mystical";
     } else if (raw >= 45) {
@@ -134,7 +134,7 @@ function chest(prob, rarity) {
     } else if (raw >= 30) {
         theme = "industrial";
     } else if (raw >= 25) {
-        theme = "alien";
+        theme = "woodlands";
     } else if (raw >= 20) {
         theme = "jungle";
     } else if (raw >= 15) {
