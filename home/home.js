@@ -11,7 +11,7 @@ const running = ref(database, `identity/${sessionStorage.getItem("key")}/running
 const totalTime = ref(database, `identity/${sessionStorage.getItem("key")}/totaltime`)
 const allTimeTotal = ref(database, `identity/${sessionStorage.getItem("key")}/allTimeTotal`)
 const coins = ref(database, `identity/${sessionStorage.getItem("key")}/coins`)
-
+const activebackground = ref(database, `identity/${sessionStorage.getItem("key")}/activebackground`)
 
 let localRunning = false
 let localStartTime = null
@@ -31,6 +31,12 @@ let allTimeTotalEl = document.getElementById("all-time-total")
 let shopBtn = document.getElementById("shop-btn")
 let inventoryBtn = document.getElementById("inventory-btn")
 
+
+onValue(activebackground, function(snapshot){
+    
+    let activebackground = Object.values(snapshot.val())[0]
+    document.body.style.backgroundImage = `url('${activebackground}')`; // Set as background
+})
 
 
 
