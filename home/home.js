@@ -30,6 +30,7 @@ let coinsCount = document.getElementById("coins-count")
 let allTimeTotalEl = document.getElementById("all-time-total")
 let shopBtn = document.getElementById("shop-btn")
 let inventoryBtn = document.getElementById("inventory-btn")
+let leaderBtn = document.getElementById("leaderboard-btn")
 
 
 onValue(activebackground, function(snapshot){
@@ -129,4 +130,8 @@ shopBtn.addEventListener("click", function(){
 inventoryBtn.addEventListener("click", function(){
     window.location.href = "../inventory/inventory.html"
 })
+leaderBtn.addEventListener("click", function(){ 
+    window.location.href = "../leaderboard/leaderboard.html"
+}
+)
 setInterval(second, 1)
