@@ -33,11 +33,15 @@ let inventoryBtn = document.getElementById("inventory-btn")
 let leaderBtn = document.getElementById("leaderboard-btn")
 
 
-onValue(activebackground, function(snapshot){
-    
-    let activebackground = Object.values(snapshot.val())[0]
-    document.body.style.backgroundImage = `url('${activebackground}')`; // Set as background
-})
+onValue(activebackground, function(snapshot) {
+    const data = snapshot.val();
+    if (data) { // Check if data is not null
+        let backgroundUrl = Object.values(data)[0]; // Get the first value
+        if (backgroundUrl) { // Ensure it's not null or undefined
+            document.body.style.backgroundImage = `url('${backgroundUrl}')`;
+        }
+    }
+});
 
 
 

@@ -43,7 +43,6 @@ onValue(items, function(snapshot){
 
 
 backBtn.addEventListener("click", function(){
-    alert("back")
     window.location.href = '../home/home.html'
 })
 
