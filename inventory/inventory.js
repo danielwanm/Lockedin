@@ -10,7 +10,6 @@ const activebackground = ref(database, `identity/${sessionStorage.getItem("key")
 //DOM
 const backgrounds = document.getElementById("backgrounds")
 const backBtn = document.getElementById("back-btn")
-const equipBtn = document.getElementById("equip-1")
 
 
 let localitems = []
@@ -45,6 +44,7 @@ coinscount.innerText = localcoins
 
 
 backBtn.addEventListener("click", function(){
+    alert("back")
     window.location.href = '../home/home.html'
 })
 
