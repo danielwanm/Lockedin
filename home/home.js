@@ -58,9 +58,7 @@ onValue(startTimeInDb, function(snapshot){
     if (data) { // Ensure data is not null or undefined
         let start = Object.values(data)[0];
         localStartTime = start;
-    } else {
-        localStartTime = 0; // Set default value
-    }
+    } 
 });
 
 onValue(totalTime, function(snapshot){
@@ -69,10 +67,7 @@ onValue(totalTime, function(snapshot){
         let totalTime = Object.values(data)[0];
         localTotalTime = totalTime;
         timeStudiedTotal.innerText = format(localTotalTime);
-    } else {
-        localTotalTime = 0; // Set default value
-        timeStudiedTotal.innerText = format(localTotalTime);
-    }
+    } 
 });
 
 onValue(coins, function(snapshot){
@@ -81,10 +76,7 @@ onValue(coins, function(snapshot){
         let coins = Object.values(data)[0];
         localCoins = coins;
         coinsCount.innerText = localCoins;
-    } else {
-        localCoins = 0; // Set default value
-        coinsCount.innerText = localCoins;
-    }
+    } 
 });
 
 onValue(allTimeTotal, function(snapshot){
@@ -93,10 +85,7 @@ onValue(allTimeTotal, function(snapshot){
         let allTimeTotal = Object.values(data)[0];
         localAllTimeTotal = allTimeTotal;
         allTimeTotalEl.innerText = format(localAllTimeTotal);
-    } else {
-        localAllTimeTotal = 0; // Set default value
-        allTimeTotalEl.innerText = format(localAllTimeTotal);
-    }
+    } 
 });
 
 
