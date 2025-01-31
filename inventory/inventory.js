@@ -30,6 +30,9 @@ onValue(items, function(snapshot){
         let newEl = document.createElement("li")
         newEl.textContent = `${itemsArray[i].rarity} ${itemsArray[i].theme} background`
         backgrounds.append(newEl)
+        newEl.addEventListener("click", function(){
+            document.body.style.backgroundImage = `url('${itemsArray[i].url}')`; // Set as background
+        }
 
 
 
