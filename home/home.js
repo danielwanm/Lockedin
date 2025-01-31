@@ -69,7 +69,7 @@ onValue(allTimeTotal, function(snapshot){
 
 //set up total time
 
-function format(time){
+export function format(time){
     let time_s = time
     let h = Math.floor(time_s/3600)
     time_s -= h*3600
