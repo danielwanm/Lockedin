@@ -1,6 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
 import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
-
+import {format} from "../home/home.js"
 const appSettings = {
     databaseURL: `https://playground-a5d1a-default-rtdb.asia-southeast1.firebasedatabase.app/`
 };
@@ -29,7 +29,7 @@ onValue(identity, function(snapshot) {
     <tr>
     <th>Place</th>
     <th>Name</th>
-    <th>Time</th>
+    <th>Total Time Studied</th>
   </tr>`
 
     // Find the top 10 entries
@@ -49,7 +49,7 @@ onValue(identity, function(snapshot) {
         localArray.splice(winnerIndex, 1);
 
         let newEl = document.createElement("tr");
-        newEl.innerHTML = `<td>${i}</td><td>${winnerData.username}</td><td>${Object.values(winnerData.allTimeTotal)[0]}</td>`;
+        newEl.innerHTML = `<td>${i+1}</td><td>${winnerData.username}</td><td>${format(Object.values(winnerData.allTimeTotal)[0])}</td>`;
         Leaderboard.appendChild(newEl);
     }
 });
