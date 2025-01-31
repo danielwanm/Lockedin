@@ -142,11 +142,7 @@ button:hover {
     opacity: 1;
 }
 
-#convert-btn {
-    margin-top: 10px;
-    font-size: 12px;
-    padding: 8px 16px;
-}
+
 
 .coin-icon {
     width: 32px;
