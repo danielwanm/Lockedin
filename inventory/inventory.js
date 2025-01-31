@@ -21,7 +21,7 @@ onValue(activebackground, function(snapshot){
         let activebackground = Object.values(snapshot.val())[0]
         document.body.style.backgroundImage = `url('${activebackground}')`; // Set as background
     })
-    
+
 onValue(items, function(snapshot){
     
     let itemsArray = Object.values(snapshot.val())
@@ -34,6 +34,7 @@ onValue(items, function(snapshot){
         <script> 
         const equipBtn = document.getElementById("equip-${i}")
         equipBtn.addEventListener("click", function(){
+        console.log("equip clicked")
         push(activebackground, itemsArray[i].url)
         })
 
