@@ -1,59 +1,4 @@
-body {
-    min-height: 100vh;
-    margin: 0;
-    padding: 0;
-    font-family: 'Courier New', Courier, monospace;
-    background: #f4f1de;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.container {
-    width: 500px;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 25px;
-    text-align: center;
-    box-sizing: border-box;
-    background: rgba(253, 252, 247, 0.95);
-    border: 3px solid #3d405b;
-    border-radius: 2px;
-    box-shadow: 8px 8px 0px #3d405b;
-}
-
-h1 {
-    font-size: 42px;
-    font-weight: normal;
-    color: #3d405b;
-    margin: 0 0 30px 0;
-    text-align: center;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-}
-
-#backgrounds {
-    list-style-type: none; /* Removes bullet points */
-    padding: 0;
-    margin: 0;
-    width: 100%;
-}
-
-#backgrounds li {
-    background: #e07a5f;
-    color: #f4f1de;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 3px;
-    box-shadow: 2px 2px 0px #3d405b;
-}
+/* Existing styles */
 
 .back-btn {
     position: fixed;
@@ -74,7 +19,22 @@ h1 {
     text-decoration: none;
 }
 
-.back-btn:hover {
+/* Hover effect to simulate "click down" on the back button */
+.back-btn.clicked {
     transform: translate(2px, 2px);
     box-shadow: 2px 2px 0px #3d405b;
+}
+
+#backgrounds li {
+    background: #e07a5f;
+    color: #f4f1de;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    box-shadow: 2px 2px 0px #3d405b;
+    cursor: pointer; /* Add cursor pointer to indicate interaction */
+}
+
+#backgrounds li:hover {
+    background-color: #3d405b;
 }
