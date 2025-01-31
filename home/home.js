@@ -42,34 +42,63 @@ onValue(activebackground, function(snapshot) {
         }
     }
 });
-
-
-
 onValue(running, function(snapshot){
-    let runningArray = Object.values(snapshot.val())
-    let isrunning = runningArray[0]
-    localRunning = isrunning
-})
+    const data = snapshot.val();
+    if (data) { // Ensure data is not null or undefined
+        let runningArray = Object.values(data);
+        let isrunning = runningArray[0];
+        localRunning = isrunning;
+    } else {
+        localRunning = false; // Set default if null or undefined
+    }
+});
+
 onValue(startTimeInDb, function(snapshot){
-    
-    let start = Object.values(snapshot.val())[0]
-    localStartTime = start
-})
+    const data = snapshot.val();
+    if (data) { // Ensure data is not null or undefined
+        let start = Object.values(data)[0];
+        localStartTime = start;
+    } else {
+        localStartTime = 0; // Set default value
+    }
+});
+
 onValue(totalTime, function(snapshot){
-    let totalTime = Object.values(snapshot.val())[0]
-    localTotalTime = totalTime
-    timeStudiedTotal.innerText = format(localTotalTime)
-})
+    const data = snapshot.val();
+    if (data) { // Ensure data is not null or undefined
+        let totalTime = Object.values(data)[0];
+        localTotalTime = totalTime;
+        timeStudiedTotal.innerText = format(localTotalTime);
+    } else {
+        localTotalTime = 0; // Set default value
+        timeStudiedTotal.innerText = format(localTotalTime);
+    }
+});
+
 onValue(coins, function(snapshot){
-    let coins = Object.values(snapshot.val())[0]
-    localCoins = coins
-    coinsCount.innerText = localCoins
-})
+    const data = snapshot.val();
+    if (data) { // Ensure data is not null or undefined
+        let coins = Object.values(data)[0];
+        localCoins = coins;
+        coinsCount.innerText = localCoins;
+    } else {
+        localCoins = 0; // Set default value
+        coinsCount.innerText = localCoins;
+    }
+});
+
 onValue(allTimeTotal, function(snapshot){
-    let allTimeTotal = Object.values(snapshot.val())[0]
-    localAllTimeTotal = allTimeTotal
-    allTimeTotalEl.innerText = format(localAllTimeTotal)
-})
+    const data = snapshot.val();
+    if (data) { // Ensure data is not null or undefined
+        let allTimeTotal = Object.values(data)[0];
+        localAllTimeTotal = allTimeTotal;
+        allTimeTotalEl.innerText = format(localAllTimeTotal);
+    } else {
+        localAllTimeTotal = 0; // Set default value
+        allTimeTotalEl.innerText = format(localAllTimeTotal);
+    }
+});
+
 
 //set up total time
 
