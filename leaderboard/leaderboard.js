@@ -10,10 +10,11 @@ const database = getDatabase(app)
 const identity = ref(database, "identity")
 
 onValue(identity, function(snapshot){
+
     let identityArray = Object.values(snapshot.val())
     let localArray =[...identityArray]
     console.log(identityArray)
-    for (let i = 0; i <10;1++){
+    for (let i = 0; i <10;i++){
         let localmax = 0
         let winner
         for (let j = 0; j < localArray.length; j++){
@@ -28,4 +29,7 @@ onValue(identity, function(snapshot){
 
     }   
 
-})
+}
+
+
+)
