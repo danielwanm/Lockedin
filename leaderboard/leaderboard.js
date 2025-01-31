@@ -15,37 +15,28 @@ onValue(identity, function(snapshot){
     console.log("Raw Snapshot:", snapshot.val());
     let identityArray = Object.values(snapshot.val());
     console.log("Identity Array:", identityArray);
-    let localArray =[...identityArray]
+    let localArray =JSON.parse(JSON.stringify(identityArray))
     console.log(localArray)
     for (let i = 0; i <10;i++){
-        let localmax = 0
+
+
+
+        let highestTime = 0
         let winner
         for (let j = 0; j < localArray.length; j++){
-            console.log("in inner loop")
             let time = Object.values(localArray[j].allTimeTotal)[0]
-            console.log(time)
-
-            if (time > localmax){
-                localmax = time
+            if (time > highestTime){
+                highestTime = time
                 winner = j
-                console.log(winner)
-
-            }
         }
-        
-        // Store the winner's data before splicing
-        let winnerData = localArray[winner];
-        localArray.splice(winner, 1);
-        console.log(localArray);
-        
-        let newEl = document.createElement("tr")
-        console.log(winnerData)
-        newEl.innerHTML = `<td>${winnerData.username}</td><td>${Object.values(winnerData.allTimeTotal)[0]}</td>`
-        Leaderboard.append(newEl)
-
-    }   
-
-}
-
-
-)
+    }
+    let winnerData = localArray[winner];
+    localArray.splice(winner, 1);
+    console.log(localArray);
+    
+    let newEl = document.createElement("tr")
+    console.log(winnerData)
+    newEl.innerHTML = `<td>${winnerData.username}</td><td>${Object.values(winnerData.allTimeTotal)[0]}</td>`
+    Leaderboard.append(newEl)
+}   
+})
