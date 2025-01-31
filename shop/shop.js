@@ -46,6 +46,7 @@ function getRandomInt(min, max) {
 
 
 woodenBtn.addEventListener("click", function(){
+    let rarity = "none"
     if (localcoins>100){
         console.log("clicked buy")
         prob =1
@@ -58,6 +59,7 @@ woodenBtn.addEventListener("click", function(){
     }
 })
 silverBtn.addEventListener("click", function(){
+    let rarity = "none"
     if (localcoins>200){
         prob =30
         localcoins -= 200
@@ -70,6 +72,7 @@ silverBtn.addEventListener("click", function(){
  
 })
 goldBtn.addEventListener("click", function(){
+    let rarity = "none"
     if (localcoins>500){
         prob =60
         localcoins -= 500
@@ -90,7 +93,6 @@ backBtn.addEventListener("click", function(){
 
 function chest(prob, rarity) {
     let raw = getRandomInt(prob, 100)
-    let rarity
     let theme
     if (raw>95){
         rarity = "legendary"
