@@ -26,11 +26,13 @@ onValue(identity, function(snapshot){
             if (time > localmax){
                 localmax = time
                 winner = j
+                console.log(winner)
 
             }
         }
         localArray.splice(winner, 1)
         let newEl = document.createElement("tr")
+        console.log(localArray[winner])
         newEl.innerHTML = `<td>${localArray[winner].username}</td><td>${Object.values(localArray[winner].allTimeTotal)[0]}</td>`
         Leaderboard.append(newEl)
 
