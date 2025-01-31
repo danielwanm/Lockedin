@@ -32,6 +32,7 @@ onValue(items, function(snapshot){
         backgrounds.append(newEl)
         newEl.addEventListener("click", function(){
             document.body.style.backgroundImage = `url('${itemsArray[i].url}')`; // Set as background
+            remove(activebackground)
             push(activebackground, itemsArray[i].url)
         })
     }
