@@ -106,6 +106,50 @@ function chest(prob, rarity) {
         rarity = "common"
         push(items, "common")
     }
-    alert(`you got a ${rarity} background`)
+    
+    if (raw >= 95) {
+        theme = "space";
+    } else if (raw >= 90) {
+        theme = "western";
+    } else if (raw >= 85) {
+        theme = "cyberpunk";
+    } else if (raw >= 80) {
+        theme = "fantasy";
+    } else if (raw >= 75) {
+        theme = "steampunk";
+    } else if (raw >= 70) {
+        theme = "post-apocalyptic";
+    } else if (raw >= 65) {
+        theme = "underwater";
+    } else if (raw >= 60) {
+        theme = "prehistoric";
+    } else if (raw >= 55) {
+        theme = "urban";
+    } else if (raw >= 50) {
+        theme = "mystical";
+    } else if (raw >= 45) {
+        theme = "sci-fi";
+    } else if (raw >= 40) {
+        theme = "medieval";
+    } else if (raw >= 35) {
+        theme = "futuristic";
+    } else if (raw >= 30) {
+        theme = "industrial";
+    } else if (raw >= 25) {
+        theme = "alien";
+    } else if (raw >= 20) {
+        theme = "jungle";
+    } else if (raw >= 15) {
+        theme = "arctic";
+    } else if (raw >= 10) {
+        theme = "desert";
+    } else {
+        theme = "ocean";
+    }
 
+    // Push the item to the items array
+    push(items, { rarity: rarity, theme: theme });
+
+    // Alert the user
+    alert(`You got a ${rarity} ${theme} background!`);
 }
