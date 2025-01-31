@@ -109,8 +109,8 @@ function chest(prob, rarity) {
         theme = "pokemon moon battle (full art)";
         url = "../resources/pokemon-wonderland-full-art.jpg";
     } else if (raw >= 90) {
-        theme = "mountain sunset";
-        url = "../resources/mountain-sunset.jpg";
+        theme = "pokemon cookfest";
+        url = "../resources/1320340.jpeg";
     } else if (raw >= 85) {
         theme = "cyberpunk 2077";
         url = "../resources/cyberpunk-2077.jpg";
@@ -135,8 +135,8 @@ function chest(prob, rarity) {
         theme = "pokemon wonderland";
         url = "../resources/asda.jpg";
     } else if (raw >= 45) {
-        theme = "pokemon cookfest";
-        url = "../resources/1320340.jpeg";
+        theme = "mountain sunset";
+        url = "../resources/mountain-sunset.jpg";
     } else if (raw >= 40) {
         theme = "medieval";
     } else if (raw >= 35) {
