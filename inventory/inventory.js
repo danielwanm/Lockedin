@@ -40,7 +40,6 @@ onValue(items, function(snapshot){
 })
 
 
-coinscount.innerText = localcoins 
 
 
 backBtn.addEventListener("click", function(){
