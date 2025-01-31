@@ -95,16 +95,13 @@ function chest(prob, rarity) {
     let raw = getRandomInt(prob, 100)
     if (raw>95){
         rarity = "legendary"
-        push(items, "legendary")
 
     }
     else if (raw>60){
         rarity = "rare"
-        push(items, "rare")
     }
     else {
         rarity = "common"
-        push(items, "common")
     }
     
     if (raw >= 95) {
