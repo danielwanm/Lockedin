@@ -11,6 +11,21 @@ const identity = ref(database, "identity")
 
 onValue(identity, function(snapshot){
     let identityArray = Object.values(snapshot.val())
+    let localArray =[...identityArray]
     console.log(identityArray)
+    for (let i = 0; i <10;1++){
+        let localmax = 0
+        let winner
+        for (let j = 0; j < localArray.length; j++){
+            if (localArray[j].allTimeTotal > localmax){
+                localmax = localArray[j].allTimeTotal
+                winner = j
+                let newEl = document.createElement("tr")
+                newEl.innerHTML = `<td>${localArray[winner].username}</td><td>${localArray[winner].allTimeTotal}</td>`
+            }
+        }
+        localArray.splice(winner, 1)
+
+    }   
 
 })
