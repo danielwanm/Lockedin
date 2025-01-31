@@ -158,12 +158,26 @@ leaderBtn.addEventListener("click", function(){
 
 
 document.body.addEventListener("click", function(event) {
-    // Check if the click happened on an empty space
+    let container = document.querySelector(".container");
+    let coinsDisplay = document.querySelector(".coins-display");
+    let buttonsDisplay = document.querySelector(".buttons-display");
+
     if (!event.target.closest(".container, .coins-display, .buttons-display")) {
-        document.querySelector(".container").classList.add("hidden");
-        document.querySelector(".coins-display").classList.add("hidden");
-        document.querySelector(".buttons-display").classList.add("hidden");
+        let isHidden = container.classList.contains("hidden-down");
+
+        if (isHidden) {
+            // Bring them back
+            container.classList.remove("hidden-down");
+            coinsDisplay.classList.remove("hidden-right");
+            buttonsDisplay.classList.remove("hidden-left");
+        } else {
+            // Slide them off in their respective directions
+            container.classList.add("hidden-down");
+            coinsDisplay.classList.add("hidden-right");
+            buttonsDisplay.classList.add("hidden-left");
+        }
     }
 });
+
 
 setInterval(second, 1)

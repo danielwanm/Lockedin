@@ -169,8 +169,26 @@ button:hover {
     color: #f2cc8f;
 }
 
-.hidden {
-    transform: translateY(100vh); /* Moves elements down off the screen */
-    opacity: 0;
+/* Base transition for smooth animation */
+.container, .coins-display, .buttons-display {
     transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
+
+/* Slide the container (center) down */
+.hidden-down {
+    transform: translateY(100vh);
+    opacity: 0;
+}
+
+/* Slide the coins display (top-right) to the right */
+.hidden-right {
+    transform: translateX(100vw);
+    opacity: 0;
+}
+
+/* Slide the buttons display (top-left) to the left */
+.hidden-left {
+    transform: translateX(-100vw);
+    opacity: 0;
+}
+
