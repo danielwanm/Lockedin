@@ -94,9 +94,9 @@ backBtn.addEventListener("click", function(){
 function chest(prob, rarity) {
     let raw = getRandomInt(prob, 100)
     let theme
+    let url
     if (raw>90){
         rarity = "legendary"
-
     }
     else if (raw>60){
         rarity = "rare"
@@ -107,6 +107,7 @@ function chest(prob, rarity) {
     
     if (raw >= 95) {
         theme = "pokemon wonderland (full art)";
+        url = "../resources/pokemon-wonderland-full-art.jpg"
     } else if (raw >= 90) {
         theme = "hyperion (full art)";
     } else if (raw >= 85) {
@@ -146,7 +147,7 @@ function chest(prob, rarity) {
     }
 
     // Push the item to the items array
-    push(items, { rarity: rarity, theme: theme });
+    push(items, { rarity: rarity, theme: theme, url: url });
 
     // Alert the user
     alert(`You got a ${rarity} ${theme} background!`);
