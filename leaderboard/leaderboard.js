@@ -20,16 +20,19 @@ onValue(identity, function(snapshot){
         let winner
         for (let j = 0; j < localArray.length; j++){
             console.log("in inner loop")
-            console.log(Object.values(localArray[j].allTimeTotal)[0])
-            if (Object.values(localArray[j].allTimeTotal)[0] > localmax){
-                localmax = Object.values(localArray[j].allTimeTotal)[0]
+            let time = Object.values(localArray[j].allTimeTotal)[0]
+            console.log(time)
+
+            if (time > localmax){
+                localmax = time
                 winner = j
-                let newEl = document.createElement("tr")
-                newEl.innerHTML = `<td>${localArray[winner].username}</td><td>${Object.values(localArray[winner].allTimeTotal)[0]}</td>`
-                Leaderboard.append(newEl)
+
             }
         }
         localArray.splice(winner, 1)
+        let newEl = document.createElement("tr")
+        newEl.innerHTML = `<td>${localArray[winner].username}</td><td>${Object.values(localArray[winner].allTimeTotal)[0]}</td>`
+        Leaderboard.append(newEl)
 
     }   
 
