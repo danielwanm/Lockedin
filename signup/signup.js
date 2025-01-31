@@ -41,7 +41,7 @@ form.addEventListener("submit", function(e) {
         console.log(localusercount)
         push(usercount, localusercount)
         alert("account created")
-        window.location.href = 'index.html'
+        window.location.href = '../index.html'
 
     })
     .catch(error => {

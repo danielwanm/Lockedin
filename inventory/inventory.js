@@ -6,8 +6,12 @@ const appSettings = {
 const app = initializeApp(appSettings)
 const database = getDatabase(app)
 const items  = ref(database, `identity/${sessionStorage.getItem("key")}/items`)
-
+//DOM
 const backgrounds = document.getElementById("backgrounds")
+const backBtn = document.getElementById("back-btn")
+
+
+
 let localitems = []
 
 
@@ -17,7 +21,12 @@ onValue(items, function(snapshot){
     let itemsArray = Object.values(snapshot.val())
     console.log(itemsArray)
     for (let i = 0; i < itemsArray.length; i++){
-        backgrounds.innerHTML += `<li>${itemsArray[i].rarity} ${itemsArray[i].theme} background</li>`
+        backgrounds.innerHTML += 
+        `
+        <li>${itemsArray[i].rarity} ${itemsArray[i].theme} background</li>
+        <button id="equip-${i}">Equip</button>
+
+        `
 
     }
     let items = itemsArray[0]
@@ -28,7 +37,9 @@ onValue(items, function(snapshot){
 coinscount.innerText = localcoins 
 
 
-
+backBtn.addEventListener("click", function(){
+    window.location.href = '../home/home.html'
+})
 
 
 
