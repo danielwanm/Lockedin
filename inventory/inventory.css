@@ -6,8 +6,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-size: cover; /* Scale the image to cover the entire document */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+  }
     
-}
+
 .container {
     width: 500px;
     padding: 40px;
