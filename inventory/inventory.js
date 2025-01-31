@@ -15,6 +15,7 @@ let localitems = []
 onValue(items, function(snapshot){
     
     let itemsArray = Object.values(snapshot.val())
+    console.log(itemsArray)
     for (let i = 0; i < itemsArray.length; i++){
         backgrounds.innerHTML += `<li>${itemsArray[i]}</li>`
 
