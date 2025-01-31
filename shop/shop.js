@@ -109,7 +109,8 @@ function chest(prob, rarity) {
         theme = "pokemon wonderland (full art)";
         url = "../resources/pokemon-wonderland-full-art.jpg"
     } else if (raw >= 90) {
-        theme = "hyperion (full art)";
+        theme = "mountain sunset";
+        url = "../resources/mountain-sunset.jpg"
     } else if (raw >= 85) {
         theme = "cyberpunk 2077";
     } else if (raw >= 80) {
