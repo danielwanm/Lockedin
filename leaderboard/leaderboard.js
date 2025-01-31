@@ -19,6 +19,8 @@ onValue(identity, function(snapshot){
         let localmax = 0
         let winner
         for (let j = 0; j < localArray.length; j++){
+            console.log("in inner loop")
+            console.log(localArray[j].allTimeTotal)
             if (localArray[j].allTimeTotal > localmax){
                 localmax = localArray[j].allTimeTotal
                 winner = j
