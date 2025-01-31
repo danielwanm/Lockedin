@@ -32,11 +32,15 @@ onValue(identity, function(snapshot){
 
             }
         }
-        localArray.splice(winner, 1)
-        console.log(localArray)
+        
+        // Store the winner's data before splicing
+        let winnerData = localArray[winner];
+        localArray.splice(winner, 1);
+        console.log(localArray);
+        
         let newEl = document.createElement("tr")
-        console.log(localArray[winner])
-        newEl.innerHTML = `<td>${localArray[winner].username}</td><td>${Object.values(localArray[winner].allTimeTotal)[0]}</td>`
+        console.log(winnerData)
+        newEl.innerHTML = `<td>${winnerData.username}</td><td>${Object.values(winnerData.allTimeTotal)[0]}</td>`
         Leaderboard.append(newEl)
 
     }   
