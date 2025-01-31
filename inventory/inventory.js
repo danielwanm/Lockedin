@@ -33,7 +33,7 @@ onValue(items, function(snapshot){
         <button id="equip-${i}">Equip</button>
         <script> 
         const equipBtn = document.getElementById("equip-${i}")
-        equipBtn.addEventListener("click", function(){
+        document.getElementById("equip-${i}").addEventListener("click", function(){
         console.log("equip clicked")
         push(activebackground, itemsArray[i].url)
         })
