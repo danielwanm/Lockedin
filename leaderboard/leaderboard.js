@@ -8,7 +8,7 @@ const appSettings = {
 const app = initializeApp(appSettings);
 const database = getDatabase(app);
 const identity = ref(database, "identity");
-const Leaderboard = document.getElementById("leaderboard");
+const Leaderboard = document.getElementById("Leaderboard");
 
 onValue(identity, function(snapshot) {
     const data = snapshot.val();
