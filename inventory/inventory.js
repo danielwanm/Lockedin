@@ -27,20 +27,13 @@ onValue(items, function(snapshot){
     let itemsArray = Object.values(snapshot.val())
     console.log(itemsArray)
     for (let i = 0; i < itemsArray.length; i++){
-        backgrounds.innerHTML += 
-        `
-        <li>${itemsArray[i].rarity} ${itemsArray[i].theme} background</li>
-        <button id="equip-${i}">Equip</button>
-        <script> 
-        const equipBtn = document.getElementById("equip-${i}")
-        document.getElementById("equip-${i}").addEventListener("click", function(){
-        console.log("equip clicked")
-        push(activebackground, itemsArray[i].url)
-        })
+        let newEl = document.createElement("li")
+        newEl.textContent = `${itemsArray[i].rarity} ${itemsArray[i].theme} background`
+        backgrounds.append(newEl)
 
-        </script>
 
-        `
+
+        
 
     }
     let items = itemsArray[0]
@@ -54,7 +47,6 @@ coinscount.innerText = localcoins
 backBtn.addEventListener("click", function(){
     window.location.href = '../home/home.html'
 })
-
 
 
 
