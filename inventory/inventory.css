@@ -8,6 +8,9 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .container {
@@ -36,14 +39,20 @@ h1 {
     text-transform: uppercase;
 }
 
-.title {
-    font-size: 42px;
-    font-weight: normal;
-    color: #3d405b;
+#backgrounds {
+    list-style-type: none; /* Removes bullet points */
+    padding: 0;
     margin: 0;
-    text-align: center;
-    letter-spacing: 3px;
-    text-transform: uppercase;
+    width: 100%;
+}
+
+#backgrounds li {
+    background: #e07a5f;
+    color: #f4f1de;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    box-shadow: 2px 2px 0px #3d405b;
 }
 
 .back-btn {
