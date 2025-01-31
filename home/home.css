@@ -168,3 +168,9 @@ button:hover {
 #coins-count {
     color: #f2cc8f;
 }
+
+.hidden {
+    transform: translateY(100vh); /* Moves elements down off the screen */
+    opacity: 0;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}

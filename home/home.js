@@ -154,6 +154,16 @@ inventoryBtn.addEventListener("click", function(){
 })
 leaderBtn.addEventListener("click", function(){ 
     window.location.href = "../leaderboard/leaderboard.html"
-}
-)
+})
+
+
+document.body.addEventListener("click", function(event) {
+    // Check if the click happened on an empty space
+    if (!event.target.closest(".container, .coins-display, .buttons-display")) {
+        document.querySelector(".container").classList.add("hidden");
+        document.querySelector(".coins-display").classList.add("hidden");
+        document.querySelector(".buttons-display").classList.add("hidden");
+    }
+});
+
 setInterval(second, 1)
