@@ -1,5 +1,5 @@
 if (!sessionStorage.getItem("key")) {
-    window.location.href = "index.html"
+    window.location.href = "../index.html"
 }
 
 
