@@ -12,8 +12,9 @@ const Leaderboard = document.getElementById("leaderboard")
 
 onValue(identity, function(snapshot){
 
-    let identityArray = Object.values(snapshot.val())
-    console.log(identityArray)
+    console.log("Raw Snapshot:", snapshot.val());
+    let identityArray = Object.values(snapshot.val());
+    console.log("Identity Array:", identityArray);
     let localArray =[...identityArray]
     console.log(localArray)
     for (let i = 0; i <10;i++){
