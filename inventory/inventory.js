@@ -7,14 +7,35 @@ const app = initializeApp(appSettings)
 const database = getDatabase(app)
 const items  = ref(database, `identity/${sessionStorage.getItem("key")}/items`)
 
-
+const backgrounds = document.getElementById("backgrounds")
 let localitems = []
+
 
 
 onValue(items, function(snapshot){
     
     let itemsArray = Object.values(snapshot.val())
+    for (let i = 0; i < itemsArray.length; i++){
+        backgrounds.innerHTML += `<li>${itemsArray[i]}</li>`
+
+    }
     let items = itemsArray[0]
     localitems = items
 })
+
+
 coinscount.innerText = localcoins 
+
+
+
+
+
+
+
+
+
+
+
+
+
+

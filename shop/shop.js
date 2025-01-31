@@ -18,6 +18,7 @@ let woodenBtn = document.getElementById("wooden-btn")
 let silverBtn = document.getElementById("silver-btn")
 let goldBtn = document.getElementById("gold-btn")
 let coinscount = document.getElementById("coins-count")
+let backBtn = document.getElementById("back-btn")
 
 
 onValue(coins, function(snapshot) {
@@ -83,6 +84,11 @@ goldBtn.addEventListener("click", function(){
     }
 
 })
+
+backBtn.addEventListener("click", function(){
+    location.href = "../home.html"
+})
+
 
 
 function chest(prob, rarity) {
