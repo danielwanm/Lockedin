@@ -148,11 +148,7 @@ function chest(prob, rarity) {
     }
 
     // Push the item to the items array
-    if (!localitems.some(item => item === theme)) {
-        localitems.push(theme);
-    }
-    remove(items)
-    push(items, localitems)
+    push(items, { rarity: rarity, theme: theme, url: url });
 
     // Alert the user
     alert(`You got a ${rarity} ${theme} background!`);
